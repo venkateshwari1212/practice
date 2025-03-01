@@ -5,12 +5,12 @@ print(10==3)
 print(9<7)
 # nothing to commit
 # conditional statement using boolean
-a=2000
+input1=2000
 b=20
-if a/b==0:
-    print("a is a even number")
+if input1/b==0:
+    print("input1 is a even number")
 else:
-    print("a is an odd number")
+    print("input1 is an odd number")
 
 print(bool("hello"))
 print(bool(15))
