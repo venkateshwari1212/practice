@@ -59,13 +59,23 @@ converted_miles=km*miles
 print(f"{km} kilometers ={converted_miles} miles")
 
 #5. check if a number is positive,negative,zero
-check=int(input("enter a number to find if positive, negative or zero:"))
-if check==0:
-    print(f"{check} is zero")
-elif check>0:
-    print(f"{check} is Positive")
+# check=int(input("enter a number to find if positive, negative or zero:"))
+# if check==0:
+#     print(f"{check} is zero")
+# elif check>0:
+#     print(f"{check} is Positive")
+# else:
+#     print(f"{check} is Negative")
+
+# conditional statements
+# 1.find the largest of three numbers
+a,b,c=20,289,100
+if a>=b and a>=c:
+    print(f"{a} is Highest amoung three numbers")
+elif b>=a and b>=c:
+    print(f"{b} is Highest amoung three numbers")
 else:
-    print(f"{check} is Negative")
+    print(f"{c} is Highest amoung three numbers")
 
 
 
