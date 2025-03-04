@@ -58,5 +58,14 @@ miles=0.621371
 converted_miles=km*miles
 print(f"{km} kilometers ={converted_miles} miles")
 
+#5. check if a number is positive,negative,zero
+check=int(input("enter a number to find if positive, negative or zero:"))
+if check==0:
+    print(f"{check} is zero")
+elif check>0:
+    print(f"{check} is Positive")
+else:
+    print(f"{check} is Negative")
+
 
 
