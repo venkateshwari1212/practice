@@ -175,11 +175,29 @@ else:
 
 # Loops
 #1. Print numbers from 1 to the given number N
-N=int(input("enter a number to get numbers: "))
-i=0
-while i<N:
-    i=i+1
-    print(i)
+# N=int(input("enter a number to get numbers: "))
+# i=0
+# while i<N:
+#     i=i+1
+#     print(i)
+
+#2. Print even numbers up to the given number N
+# num=int(input("enter a number to get numbers: "))
+# i=0
+# while i<num:
+#     i=i+2
+#     print(i)
+
+# 3.Sum of first N natural numbers (sum = n * (n+1) / 2)
+num1= int(input("enter a number to get sum:"))
+# sum1=num1*(num1+1)/2
+# print(sum1)
+sum2=0
+for i in range(1,num1+1):
+    sum2=i+sum2
+print(sum2)
+
+
 
 
 
