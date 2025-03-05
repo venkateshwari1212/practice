@@ -77,5 +77,29 @@ elif b>=a and b>=c:
 else:
     print(f"{c} is Highest amoung three numbers")
 
+''' 2. check if a year is a leap year. A leap year is a year that is divided by 4,
+but if it is a century year (divisible by 100),  
+it must also be divisible by 400 to be a leap year.'''
+
+# year=int(input("Enter a number to check if it is a Leap Year:"))
+
+# if (year % 4==0 and year % 100!=0) or (year % 400==0):
+#     print(f"{year} is leap year")
+# else: 
+#     print(f"{year} is not leap year")
+
+# 3. Check if a character is a vowel or consonant
+
+character=input("enter a char:")
+vowels= "aeiou"
+if character in vowels:
+    print(f"{character} is vowel")
+elif character.isalpha():
+    print(f"{character} is consonant")
+else: 
+    print(f"{character} is invalid input please enter letters")
+
+
+
 
 
