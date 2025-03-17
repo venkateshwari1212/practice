@@ -189,17 +189,281 @@ else:
 #     print(i)
 
 # 3.Sum of first N natural numbers (sum = n * (n+1) / 2)
-num1= int(input("enter a number to get sum:"))
-# sum1=num1*(num1+1)/2
+# number1=10
+# i=1
+# sum=0
+# while i<=number1:
+#     sum=sum+i
+#     i=i+1
+# print(sum)
+
+#  Calculate the factorial of a number (n! = n × (n-1) × ... × 1) without using def function 4.
+num2=5
+i=5
+factorial=1
+while i>=1:
+    factorial=factorial*i
+    i=i-1
+print(factorial)
+
+# Print multiplication table of a number  Example:
+#  2*1 = 2
+#  2*2 = 4
+num3=2
+i=1
+mul=0
+while i<=10:
+    mul=num3*i
+    print(f"{num3}*{i}={mul}")
+    i=i+1
+
+# strings
+# 1.Write a program to Reverse a given string (at least 2 ways)
+user_input= "samjavaragamana"
+reverse1=user_input[::-1]
+print(reverse1)
+reverse2=reverse1[::-1]
+print(reverse2)
+
+# 2. Count the number of vowels in a string
+name= "venkateshwari"
+count= 0
+vowels="aeiouAEIOU"
+
+for char in name:
+    if char in vowels:
+        count=count+1
+print(count)
+
+# Check if a string is a palindrome
+poly= "jalaj"
+
+rev_1=poly[::-1]
+print(rev_1)
+rev_2=rev_1[::-1]
+print(rev_2)
+
+if rev_1==rev_2:
+    print("input is ployndrome")
+else: 
+    print("input is not polyndrome") 
+
+string = "santoor"
+# First reversal using a loop
+reversed_string1 = ""
+for char in string:
+    reversed_string1 = char + reversed_string1  # Prepend each character
+print("First Reversed String:", reversed_string1)
+
+# second reversal using while loop 
+reversed_string2=""
+i=len(reversed_string1) - 1 
+while i>=0 :
+    reversed_string2= reversed_string2+ reversed_string1[i]
+    i=i-1
+print("second reversed string:",reversed_string2)
+
+
+#  4.Convert uppercase to lowercase and vice versa
+string1="can we join for DINNER?"
+converted_text= string1.swapcase()
+print(converted_text)
+
+# using loop uppercase to lowercase and vice versa
+converted_text1=""
+for char in string1:
+    if char.islower():
+        converted_text1=converted_text1+char.upper()
+    elif char.isupper():
+        converted_text1=converted_text1+char.lower()
+    else: 
+        converted_text1=converted_text1+char
+print(converted_text1)
+
+# 5. Find the length of a string without using len() function
+string2="Double choco chip"
+count=0
+for i in string2:
+    count=count+1
+print(count)
+    
+
+# lists
+# 1.find the largest element of a list
+l1=[300,450,202200,456,672]
+largest=l1[0]
+for num in l1:
+    if num>largest:
+        largest=num
+print(largest)
+# by using method
+l1.sort(reverse=True)
+print(l1[0])
+
+# 2.find the smallest element in list 
+l2=[10908,2098,240,54326,100,70]
+smallest=l2[0]
+for num in l2:
+    if num<smallest:
+        smallest=num
+print(smallest)
+# by using method
+l2.sort()
+print(l2[0])
+
+# 3. Find the sum of elements in a list
+# l3=[200,450,350,100]
+# sum=0
+# for num in l3:
+#     sum=num+sum
+# print(sum)
+
+# # using while loop 
+# sum1=0
+# i=len(l3)-1
+# while i >=0:
+#     sum1=sum1+l3[i]
+#     i=i-1
 # print(sum1)
-sum2=0
-for i in range(1,num1+1):
-    sum2=i+sum2
-print(sum2)
+
+#  Sort a list in ascending order
+l4=[2,50,100,123,000,209]
+l5=["banana","apple","kiwi","orange","water melon","pineapple"]
+l4.sort()
+l5.sort()
+print(l4)
+print(l5)
+
+
+# Remove duplicates from a list
+l6=[800,20,50,30,50,90]
+unique=[]
+for num in l6:
+    if num not in unique:
+        unique.append(num)
+print(unique)
+
+# tuple
+# 1 Find the maximum and minimum number in a tuple.
+numbers = (200, 205, 303, 576, 8099, 20453)
+
+max1 = numbers[0]
+min1 = numbers[0]
+
+for num in numbers:
+    if num > max1:
+        max1 = num  # Update max value
+    if num < min1:
+        min1 = num  # Update min value
+
+print("Maximum value:", max1)
+print("Minimum value:", min1)
+
+# using methods
+t1 = (10, 25, 3, 56, 89, 2)
+
+# Find maximum and minimum
+max_value = max(t1)
+min_value = min(t1)
+
+print("Maximum value:", max_value)
+print("Minimum value:", min_value)
+
+# 2 Convert a tuple to a list
+l7=list(numbers)
+print(l7)
+
+# 3 Count occurrences of an element in a tuple
+t = (1, 2, 3, 4, 2, 2, 5, 3, 1, 4, 4, 5, 5)
+element = 2  
+count=0
+for item in t:
+    if item == element:
+        count += 1
+print(f"{element} appears {count} times in the tuple.")
+
+# using method 
+t = (1, 2, 3, 4, 2, 2, 5, 3, 1, 4, 4, 5, 5)
+count_2 = t.count(2)  # Count occurrences of 2
+print(f"2 appears {count_2} times in the tuple.")
+
+# 4 Find the index of an element in a tuple
+t = (10, 20, 30, 40, 50)
+index_30 = t.index(30)  
+print(f"The index of 30 is: {index_30}")
+
+# 5 Reverse a tuple
 
 
 
 
 
 
+
+#  Create a dictionary and print keys & values 1.
+menu={
+    "soup":["tomato soup","hot and sour soup"],
+    "starter": ["fried chicken","bangla chicken","mutton maraag"],
+    "main_course":["chicken biryani","rayudu pulav","mutton biryani"],
+    "dessert":"sheer kurma"
+}
+# print(menu)
+print(menu["soup"])
+
+# 2 Find the sum of dictionary values 
+prasad={
+    "maths":99,
+    "science":94,
+    "social":98,
+    "ebnglish":80
+}
+sum_prasad=0
+for values in prasad.values():
+    sum_prasad=sum_prasad+values
+
+print(sum_prasad)
+
+#using method:
+sum_prasad1=sum(prasad.values())
+print(sum_prasad1)
+
+# Merge two dictionaries
+jyothi={
+    "math":99,
+    "sci":54,
+    "soc":98,
+    "eng":80
+}
+exam={**prasad,**jyothi}
+print(exam)
+
+# my_dict = {'apple': 3, 'banana': 1, 'cherry': 2}
+
+# Sorting by values using sorted() and lambda
+sorted_dict = dict(sorted(jyothi.items(), key=lambda item: item[1]))
+
+print(sorted_dict)
+
+# using prasad dict for sorting
+# Convert dictionary to a list of (key, value) pairs
+items = list(prasad.items())
+n = len(items)
+
+# Bubble Sort
+for i in range(n - 1):
+    swapped = False  # Track if swaps happen
+
+    for j in range(n - 1 - i):
+        if items[j][1] > items[j + 1][1]:  # Compare values
+            items[j], items[j + 1] = items[j + 1], items[j]  # Swap
+            swapped = True
+
+    if not swapped:
+        break  # Stop if already sorted
+
+# Convert the sorted list back to a dictionary
+sorted_dict = dict(items)
+
+# Print sorted dictionary
+print("Sorted dictionary:", sorted_dict)
 
