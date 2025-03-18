@@ -467,3 +467,248 @@ sorted_dict = dict(items)
 # Print sorted dictionary
 print("Sorted dictionary:", sorted_dict)
 
+# Count the occurrences of elements in a dictionary
+dict_market={
+    'aloo':3,
+    'drumsticks':4,
+    'tomato':3,
+    'brinjal':4,
+    'guava':2,
+    'banana':3
+}
+count_veggies={}
+for values in dict_market.values():
+    if values in count_veggies:
+        count_veggies[values]=count_veggies[values]+1
+    else: count_veggies[values]=1
+print(count_veggies)
+
+#  Mathematical Programs
+
+# num = int(input("Enter a number: "))  # Take user input
+
+# if num > 1:  # Prime numbers must be greater than 1
+#     for i in range(2, num + 1): 
+#         if num % i == 0:  
+#             print(num, "is NOT a prime number")
+#             break  
+#     else:
+#         print(num, "is a prime number")  
+# else:
+#     print(num, "is NOT a prime number")  
+
+# Find the sum of digits of a number (eg: input: 1234 and output: 10) 
+number5=123456
+sum_digits = 0
+
+while number5 > 0:
+    sum_digits += number5 % 10  # Add last digit
+    number5 //= 10  # Remove last digit
+
+print("Sum of digits:", sum_digits)  # Output: 10
+
+# Find the LCM of two numbers
+a=31
+b=8
+greater_num=0
+LCM=0
+if a > b:
+    greater_num=a
+else:
+    greater_num=b
+
+while True:
+    if(greater_num % a==0 and greater_num % b==0):
+        LCM = greater_num
+        break
+    greater_num=greater_num+1
+print(f"{LCM} is of {a} and {b}")
+
+# Find the GCD of two numbers
+a = 48
+b = 18
+smaller=0
+GCD=0
+if a < b:
+    smaller=a
+else: b
+
+for i in range(smaller, 0, -1):
+    if a % i == 0 and b % i == 0:  
+        GCD = i 
+        break 
+print(f"GCD of {a} and {b} is {GCD}")
+
+# Define a function to find the sum of two numbers
+
+# Function to find the sum of two numbers
+
+def add_numbers(a, b):
+    return a + b  
+
+num1 = 10
+num2 = 20
+result = add_numbers(num1, num2)
+
+print(f"Sum of {num1} and {num2} is {result}")
+
+# Define a function to return the square of a number
+
+def square_number(n):
+    return n * n  
+
+num = 5
+result = square_number(num)
+
+print(f"Square of {num} is {result}")
+
+# Define a function with default arguments
+def face_book(name, age=18):
+    print(name)
+    print(age)
+
+
+#  Define a function with variable-length arguments
+def user_info(**details):
+    for key, value in details.items():
+        print(f"{key}: {value}")
+user_info(name="Dora", age=25, city="Anakapalli")
+user_info(name="Haidi", profession="Engineer")
+
+# Define a function that returns multiple values
+def sakshi_marks():
+    return [100, 92, 73, 94, 85, 87]  # Returning multiple values as a list
+
+marks = sakshi_marks()
+print(marks)
+
+#  Lambda Functions
+# 1 Use a lambda function to add two numbers
+
+# Defining a lambda function 
+add = lambda a, b: a + b
+
+# Calling the lambda function
+result = add(400, 565)
+print(result)  
+
+
+# 2 Lambda function to find the maximum of two numbers
+maximum = lambda a, b: a if a > b else b
+
+result = maximum(10, 25)
+print(result)  
+
+# 3. Use a lambda function to square a number
+
+def get_square_function():
+    return lambda x: x ** 2
+
+# Calling the function
+square_func = get_square_function()
+print(square_func(8))  # Output: 64
+
+# 4 Use a lambda function inside map()
+numbers = [1, 2, 3, 4, 5]
+
+# Using map() with a lambda function to square each number
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+
+print(squared_numbers)  
+
+#5 Use a lambda function inside filter()
+
+words = ["hi", "apple", "go", "hello", "AI"]
+
+# Using filter() with a lambda function to filter words with more than 3 characters
+long_words = list(filter(lambda word: len(word) > 3, words))
+
+print(long_words)  
+
+#  List Comprehensions
+# 1 Generate a list of squares using list comprehension
+squares = [x ** 2 for x in range(1, 11)]
+print(squares)  
+
+# 2 Generate a list of even numbers using list comprehension
+even_numbers = [x for x in range(1, 21) if x % 2 == 0]
+print(even_numbers)  
+
+# 3 Reverse a list using list comprehension
+
+numbers = [1, 2, 3, 4, 5]
+reversed_list = [numbers[i] for i in range(len(numbers) - 1, -1, -1)]
+print(reversed_list)  
+
+#  Flatten a nested list using list comprehension
+nested_list = [[1, 2, 3], [4, 5], [6, 7, 8]]
+
+# Using list comprehension to flatten the nested list
+flattened_list = [item for sublist in nested_list for item in sublist]
+
+print(flattened_list)  
+
+# Find common elements in two lists using list comprehension
+list1 = [1, 2, 3, 4, 5, 6]
+list2 = [4, 5, 6, 7, 8, 9]
+
+common_elements = [x for x in list1 if x in list2]
+
+print(common_elements)  
+
+# Swap two numbers without using a third variable
+a = 5
+b = 10
+
+a = a + b  
+b = a - b  
+a = a - b  
+
+print("After swapping:")
+print("a =", a)  
+print("b =", b)  
+
+# Count occurrences of each word in a sentence
+sentence = "apple banana apple orange banana apple"
+words = sentence.split()
+word_count = {}
+for word in words:
+    word_count[word] = word_count.get(word, 0) + 1
+
+print(word_count)
+
+# Find the second largest number in a list
+numbers = [10, 20, 4, 45, 99, 99]
+
+largest = second_largest = float('-inf') 
+
+for num in numbers:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest and num != largest:
+        second_largest = num
+print("Second Largest Number:", second_largest)
+
+# Check if two strings are anagrams
+
+def are_anagrams(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+print(are_anagrams("listen", "silent"))  
+print(are_anagrams("hello", "world"))    
+
+#  Print Pascal's Triangle
+n = 5  # Number of rows
+
+prev_row = []  # Store previous row
+
+for i in range(n):
+    row = [1]  # First element is always 1
+    if i > 0:
+        for j in range(1, i):
+            row.append(prev_row[j-1] + prev_row[j])  # Sum of above two numbers
+        row.append(1)  # Last element is always 1
+    print(" " * (n - i), " ".join(map(str, row)))  # Print triangle with spacing
+    prev_row = row  # Store the current row for next iteration
+
